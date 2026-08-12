@@ -1,0 +1,49 @@
+generated: '2026-08-12'
+method: searched
+status: third-party
+source: >-
+  https://github.com/bluemoonfoundry/daz-mcp-server,
+  https://www.daz3d.com/forums/discussion/764791/daz-pilot-just-launched-daz-mcp-for-using-daz-with-ai-models
+first_party_server: false
+note: >-
+  Daz 3D operates NO first-party hosted or local MCP server, and no first-party MCP
+  server is referenced anywhere on daz3d.com or docs.daz3d.com. NO `MCPServer` pointer is
+  wired into apis.yml, because that pointer asserts the PROVIDER ships the server.
+  Recorded here because a real third-party MCP ecosystem has grown around the DAZ Script
+  scripting API — which is the actual agent-facing surface Daz publishes, and the reason
+  an MCP layer was possible at all without a web API.
+mechanism: >-
+  Every known Daz MCP server is a local stdio/HTTP bridge that drives a running Daz Studio
+  instance through DAZ Script, not a remote API. There is no hosted endpoint to probe and
+  no tools/list to introspect anonymously — the server only exists on a user's own machine
+  alongside Daz Studio.
+servers:
+- name: daz-mcp-server (Vangard Daz)
+  vendor: Blue Moon Foundry
+  official: false
+  url: https://github.com/bluemoonfoundry/daz-mcp-server
+  transport: local (FastMCP), wraps the DazScriptServer HTTP plug-in on default port 18811
+  requires: Daz Studio 4.5+ with the DazScriptServer plug-in installed and a auth token
+  capabilities_documented:
+  - query scene information (figures, cameras, lights, spatial positions)
+  - read and modify node properties (transforms, morphs)
+  - remote DAZ Script execution
+  note: >-
+    Tool list not captured — there is no reachable endpoint to POST tools/list to; the
+    server runs locally against the user's own Daz Studio. Capabilities above are quoted
+    from the project's published description, not from an introspected schema.
+- name: DazPilot
+  vendor: community
+  official: false
+  url: https://www.daz3d.com/forums/discussion/764791/daz-pilot-just-launched-daz-mcp-for-using-daz-with-ai-models
+  transport: local MCP, drives Daz Studio
+  note: >-
+    Free and open-source MCP tool announced on the Daz forums. Its own announcement warns
+    it cannot see the Daz Studio viewport, works by inference, and can crash Daz Studio.
+    Community project on a Daz-hosted forum — not a Daz 3D product.
+probes:
+- url: https://api.daz3d.com/mcp
+  status: 302
+  result: redirects to https://www.daz3d.com/ — no MCP endpoint
+- url: https://www.daz3d.com/.well-known/ai-plugin.json
+  status: 404

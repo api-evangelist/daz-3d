@@ -1,0 +1,76 @@
+generated: '2026-08-12'
+method: searched
+source: >-
+  https://docs.daz3d.com/public/software/dazstudio/6/change_log,
+  https://docs.daz3d.com/public/software/dazstudio/4/referenceguide/scripting/api_reference/start,
+  https://github.com/daz3d
+scope: >-
+  Lifecycle of the Daz Studio application, its DAZ Script scripting API and C++ plug-in
+  SDK, and the first-party DCC bridge plug-ins. There is no web API, so there is no
+  web-API lifecycle to record.
+versioning:
+  scheme: build-number
+  format: <major>.<yy>.<yyyy>.<build>
+  example: 6.25.2025.23807
+  semver: false
+  documented_policy: false
+  note: >-
+    No published versioning or compatibility policy. The version number is a build number;
+    nothing in the documentation states what a major bump guarantees or breaks. Consumers
+    infer compatibility from the change log.
+  channels:
+  - General Release (production)
+  - Public Build (Alpha/Beta testing)
+deprecation:
+  policy_published: false
+  sunset_header: false
+  deprecation_header: false
+  note: >-
+    No deprecation policy page, no RFC 8594 Sunset/Deprecation header surface (there is no
+    HTTP API to carry them). Deprecations and removals in the scripting API appear only as
+    change log line items. A "Porting Guide" for the DAZ Script 1 to DAZ Script 2
+    migration is published in the reference guide, which is the closest thing to a
+    published breaking-change path.
+  porting_guide: https://docs.daz3d.com/public/software/dazstudio/4/referenceguide/scripting/api_reference/start
+  NO_DEPRECATION_POINTER: true
+status_page:
+  published: false
+  probes:
+  - url: https://status.daz3d.com/
+    status: 0
+    result: DNS NXDOMAIN — host does not resolve
+  note: >-
+    No status page found on any Daz-owned host. NO `StatusPage` pointer is wired into
+    apis.yml. Incidents are communicated through the forums.
+sla:
+  published: false
+  note: No SLA is published; the product is consumer/creator software, not a hosted service.
+support:
+  help_center: https://www.daz3d.com/help
+  forums: https://www.daz3d.com/forums
+deprecated_surfaces:
+- name: Tafi / maketafi.com
+  status: absorbed
+  evidence:
+    url: https://www.maketafi.com/
+    http_status: 302
+    redirect: https://www.daz3d.com/ai-training-data
+  note: >-
+    Tafi, Daz 3D's avatar/parent brand, no longer operates a separate web presence. Every
+    maketafi.com host probed (www, api, docs, developer) 302s to the Daz 3D AI training
+    data page. Any Tafi avatar API that was marketed under that brand is no longer
+    reachable at a Tafi hostname.
+- name: api.daz3d.com
+  status: not-a-service
+  evidence:
+    url: https://api.daz3d.com/
+    http_status: 302
+    redirect: https://www.daz3d.com/
+  note: >-
+    The hostname resolves but returns 302 to the marketing site for every path probed. It
+    is not an API host and must not be recorded as a baseURL.
+maintenance_signal:
+  note: >-
+    First-party bridge plug-in releases have largely stalled while the application itself
+    ships continuously — see packages/daz-3d-packages.yml `currency_finding`. DazToUnity
+    last released 2023-08-12 and DazToUnreal 2023-09-05.

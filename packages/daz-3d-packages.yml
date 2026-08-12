@@ -1,0 +1,171 @@
+generated: '2026-08-12'
+method: searched
+source: >-
+  https://github.com/daz3d (GitHub REST API, org repos + releases/latest),
+  https://registry.npmjs.org/, https://pypi.org/, https://www.daz3d.com/daz-studio-4-5-sdk
+note: >-
+  Daz 3D publishes NO web-API client libraries, because it publishes no web API. What it
+  does publish first-party are APPLICATION SDKs and DCC bridge plug-ins: a free C++
+  plug-in SDK for Daz Studio, and open-source Daz-to-<DCC> bridges distributed as tagged
+  GitHub releases rather than through any language package registry. Registry lookups for
+  daz3d / dazstudio / daz on npm and PyPI return either 404 or unrelated squatted names.
+  Because none of these are registry-hosted, `version` and `published` are read from the
+  GitHub `releases/latest` tag and its publish date — the same currency evidence, from the
+  distribution the provider actually uses.
+currency_finding: >-
+  The bridge plug-in line has visibly decayed. Only DazToRoblox (2025-03-17) shipped a
+  release in the last 18 months. The two highest-traffic bridges — DazToUnity (2023-08-12)
+  and DazToUnreal (2023-09-05) — have not cut a release in nearly three years, while Daz
+  Studio itself is shipping public builds continuously (see changelog/). Four first-party
+  repos (DazTo3dsMax, StudioFbxImporter, DazToO3DE, DazToRuntime) have no tagged release
+  at all.
+packages:
+- language: cpp
+  registry: none
+  name: DAZ Studio 4.5+ SDK
+  url: https://www.daz3d.com/daz-studio-4-5-sdk
+  install: Daz Install Manager / DazCentral / manual (store SKU 14876, $0.00)
+  official: true
+  version: null
+  published: null
+  note: >-
+    Distributed as a free store product (C++ headers and libraries, SDK docs, sample
+    plug-ins) rather than through a package registry, so there is no metadata endpoint to
+    query. The product page states version "4.5+" with no build number and no dated
+    release, and requires a Daz account and Daz Studio 4.x Pro. Checked, nothing datable
+    to record — the consumer cannot tell which build they are getting either.
+- language: python
+  registry: github
+  name: daz3d/DazToBlender
+  url: https://github.com/daz3d/DazToBlender
+  install: Download release ZIP and install as a Blender add-on
+  official: true
+  version: 2024.2.17-hotfix-107
+  published: '2024-11-26'
+  stars: 278
+- language: csharp
+  registry: github
+  name: daz3d/DazToUnity
+  url: https://github.com/daz3d/DazToUnity
+  install: Download release package and import into Unity
+  official: true
+  version: 2023.1.1
+  published: '2023-08-12'
+  stars: 59
+- language: cpp
+  registry: github
+  name: daz3d/DazToUnreal
+  url: https://github.com/daz3d/DazToUnreal
+  install: Download release and install as an Unreal Engine plug-in
+  official: true
+  version: 2023.1.2-UE5.3-hotfix-1
+  published: '2023-09-05'
+  stars: 183
+- language: python
+  registry: github
+  name: daz3d/DazToMaya
+  url: https://github.com/daz3d/DazToMaya
+  install: Download release and install as a Maya plug-in
+  official: true
+  version: 2024.2.3.33
+  published: '2024-10-07'
+  stars: 38
+- language: python
+  registry: github
+  name: daz3d/DazToC4D
+  url: https://github.com/daz3d/DazToC4D
+  install: Download release and install as a Cinema 4D plug-in
+  official: true
+  version: 2024.2.31.67
+  published: '2024-11-26'
+  stars: 35
+- language: python
+  registry: github
+  name: daz3d/DazToRoblox
+  url: https://github.com/daz3d/DazToRoblox
+  install: Download release and install as a Daz Studio plug-in
+  official: true
+  version: 2025.1.52.527
+  published: '2025-03-17'
+  stars: 5
+- language: cpp
+  registry: github
+  name: daz3d/DazBridgeUtils
+  url: https://github.com/daz3d/DazBridgeUtils
+  install: Consumed as a shared C++ dependency by the DazTo* bridges
+  official: true
+  version: 2023.2.1.81
+  published: '2023-10-31'
+  stars: 23
+- language: cpp
+  registry: github
+  name: daz3d/DazToRuntime
+  url: https://github.com/daz3d/DazToRuntime
+  install: Source only
+  official: true
+  version: '2022'
+  published: '2022-07-21'
+  stars: 88
+- language: maxscript
+  registry: github
+  name: daz3d/DazTo3dsMax
+  url: https://github.com/daz3d/DazTo3dsMax
+  install: Source only — clone the repository
+  official: true
+  version: null
+  published: null
+  note: 'Checked GitHub releases/latest: no tagged release exists. Last push 2021-02-08.'
+- language: cpp
+  registry: github
+  name: daz3d/StudioFbxImporter
+  url: https://github.com/daz3d/StudioFbxImporter
+  install: Source only — clone the repository
+  official: true
+  version: null
+  published: null
+  note: 'Checked GitHub releases/latest: no tagged release exists. Last push 2022-10-24.'
+- language: cpp
+  registry: github
+  name: daz3d/DazToO3DE
+  url: https://github.com/daz3d/DazToO3DE
+  install: Source only — clone the repository
+  official: true
+  version: null
+  published: null
+  note: 'Checked GitHub releases/latest: no tagged release exists. Last push 2021-12-22.'
+third_party:
+- language: typescript
+  registry: npm
+  name: dazscript-types
+  url: https://www.npmjs.com/package/dazscript-types
+  install: npm install dazscript-types
+  official: false
+  version: 1.0.5
+  published: '2026-07-02'
+  note: >-
+    Community TypeScript type definitions for the DAZ Script API, by Freddy Diaz
+    (github.com/fjdiazt). Not published or endorsed by Daz 3D.
+- language: typescript
+  registry: npm
+  name: dazscript-framework
+  url: https://www.npmjs.com/package/dazscript-framework
+  install: npm install dazscript-framework
+  official: false
+  version: 1.0.39
+  published: '2026-05-30'
+  note: >-
+    Community TypeScript toolkit layering a TS development experience over DAZ Script, by
+    Freddy Diaz. Notably more current than any first-party bridge release.
+registries_checked:
+- registry: npm
+  queries:
+  - daz3d
+  - daz-studio
+  - dazstudio
+  - tafi
+  result: no first-party package (daz3d/dazstudio/tafi all 404; `daz` is an unrelated 2017 squat)
+- registry: pypi
+  queries:
+  - daz3d
+  - dazstudio
+  result: 404 — no first-party package

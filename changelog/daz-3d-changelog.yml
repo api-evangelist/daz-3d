@@ -1,0 +1,94 @@
+generated: '2026-08-12'
+method: searched
+source: https://docs.daz3d.com/public/software/dazstudio/6/change_log
+note: >-
+  Daz 3D publishes a genuinely detailed, per-build change log in its public Documentation
+  Center — one of the strongest artifacts in this profile. It covers the DESKTOP
+  APPLICATION (Daz Studio) and its scripting API, not a web API, because Daz publishes no
+  web API. Historic per-version change logs for the 4.x line remain published alongside
+  the current 6.x log. Daz describes the published log as a "sanitized" version of the
+  internal change log — complete enough to track API additions, but not the full record.
+scheme: build-number
+scheme_note: >-
+  Versions are dotted build numbers of the form <major>.<yy>.<yyyy>.<build>, e.g.
+  6.25.2025.23807. There is no semver and no documented compatibility contract attached to
+  the number.
+current_version: 6.25.2025.23807
+current_channel: public-build (Alpha/Beta)
+channels:
+- name: General Release
+  description: Production-ready builds distributed to the general public.
+- name: Public Build
+  description: >-
+    Alpha/Beta channel builds released to the community for testing; not considered
+    production ready.
+changelogs:
+- product: Daz Studio 6.x (current)
+  url: https://docs.daz3d.com/public/software/dazstudio/6/change_log
+- product: Daz Studio 4.x (historic, retained)
+  url: https://docs.daz3d.com/public/software/dazstudio/4/change_log
+entries:
+- version: 6.25.2025.23807
+  breaking: false
+  additions: true
+  highlights:
+  - Filtering/searching added to the Dopesheet on the Timeline pane
+  - '"Show In" submenu actions added to the Customize dialog for cross-view navigation'
+- version: 6.25.2025.22607
+  breaking: false
+  additions: true
+  highlights:
+  - Filtering/searching with advanced filter syntax added to the Customize Daz Studio dialog
+  - Scripting API extended for list view items
+- version: 6.25.2025.22507
+  breaking: false
+  additions: true
+  highlights:
+  - '"Node Color" column added to the Scene pane Outline page'
+  - Color picker dialog given contextual titles
+- version: 6.25.2025.22308
+  breaking: false
+  additions: false
+  highlights:
+  - Fixed regressions in Scene pane Outline filtering and multi-selection
+  - Fixed inline help tooltip issues across many widgets
+- version: 6.25.2025.22007
+  breaking: false
+  additions: false
+  highlights:
+  - Geometry Sculptor tool refactored to derive from DzWeightMapBrushTool
+  - Selection conversion between modes made non-automatic pending future implementation
+- version: 6.25.2025.21907
+  breaking: false
+  additions: true
+  highlights:
+  - Node color inheritance extended through bone hierarchies
+  - Full figure weight display based on node color added to the Node Weight Brush tool
+- version: 6.25.2025.21707
+  breaking: false
+  additions: true
+  highlights:
+  - RandomGenerator added to the scripting API
+  - Per-bone color override property added
+- version: 6.25.2025.21308
+  breaking: false
+  additions: true
+  highlights:
+  - Mouse wheel dolly zoom acceleration with Ctrl/Cmd
+  - UV template saving to raster image formats with configurable extent
+- version: 6.25.2025.21107
+  breaking: false
+  additions: true
+  highlights:
+  - '"Max Refraction Weight" property added to Draw Settings'
+  - Fixed IK-chain/pin viewport rendering
+- version: 6.25.2025.21015
+  breaking: false
+  additions: true
+  highlights:
+  - '"Depth" DrawStyle introduced with near/far adjustment'
+  - Tip image creation size made configurable (256x256 to 1024x1024)
+window: >-
+  Recent window only — the ten most recent public-build entries visible on the 6.x change
+  log page at the time of the probe. Entries are not individually date-stamped on the
+  page; the build number carries the year.

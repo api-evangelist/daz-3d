@@ -1,0 +1,69 @@
+generated: '2026-08-12'
+method: probed
+source: live HTTP probes of every Daz 3D host named in apis.yml
+note: >-
+  Every /.well-known/ path probed returned 404 (or, on api.daz3d.com, a 302 to the
+  marketing site root). Daz 3D serves no discovery surface at any well-known location.
+  Recorded as an absence — NO WellKnown or SecurityTxt pointer is wired into apis.yml,
+  because a pointer would assert that the provider serves these documents.
+hosts:
+- host: https://www.daz3d.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://docs.daz3d.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://api.daz3d.com
+  note: >-
+    api.daz3d.com resolves but is not an API host — every path returns HTTP 302 to
+    https://www.daz3d.com/. It is a parked/redirecting hostname, not a service.
+  documents:
+  - path: /.well-known/security.txt
+    status: 302
+  - path: /.well-known/agent-card.json
+    status: 302
+  - path: /.well-known/agent.json
+    status: 302
+  - path: /openapi.json
+    status: 302
+  - path: /swagger.json
+    status: 302
+  - path: /graphql
+    status: 302
+summary:
+  paths_probed: 22
+  documents_found: 0
+  security_txt: false
+  openid_configuration: false
+  api_catalog: false
+  agent_card: false

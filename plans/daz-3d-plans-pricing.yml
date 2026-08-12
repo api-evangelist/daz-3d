@@ -1,0 +1,79 @@
+generated: '2026-08-12'
+method: searched
+source: https://www.daz3d.com/daz-plus
+sources:
+- https://www.daz3d.com/daz-plus
+- https://www.daz3d.com/daz-premier
+- https://www.daz3d.com/daz-studio-4-5-sdk
+currency: USD
+note: >-
+  These are CONSUMER/CREATOR membership tiers for the Daz store and Daz Studio, not API
+  plans — Daz 3D publishes no API and therefore no API pricing. Recorded because they are
+  the only published, machine-checkable commercial tiers on the site, and because the
+  developer surface (the C++ SDK and the bridge plug-ins) is gated on membership and on
+  owning Daz Studio Pro. Prices quoted verbatim from the pricing pages on the probe date.
+plan_count: 3
+plans:
+- name: Daz Base
+  price: 0
+  price_display: Free
+  currency: USD
+  billing_period: none
+  included:
+  - Daz Studio (free 3D software)
+  - Store account, forums and gallery access
+  note: >-
+    The free tier the Daz+ page positions beneath Plus and Premier. No standalone price
+    page publishes a Base feature table; benefits are described only as the baseline the
+    paid tiers extend.
+- name: Daz Plus
+  price: 8.99
+  price_display: $8.99/mo
+  currency: USD
+  billing_period: month
+  annual_price: 69.00
+  annual_price_display: $69/yr
+  included:
+  - Free Daz Studio
+  - Member pricing on Daz+ products
+  - Free monthly and weekly legacy content
+  - Genesis Starter Essentials and cross-platform exporters
+  - Community forums and gallery
+  limits:
+  - 30% off Daz Originals
+  - $6 off Daz Originals monthly coupon
+  - $6 off of $18 on select content monthly coupon
+  - Token system, 1 token per $10 spent
+- name: Daz Premier
+  price: 18.98
+  price_display: $18.98/mo
+  currency: USD
+  billing_period: month
+  annual_price: 199.00
+  annual_price_display: $199/yr
+  included:
+  - Daz Studio Premier (advanced modeling, batch rendering, content converters)
+  - Daz to Maya and Daz to Blender bridge access
+  - Rig conversion for Unreal / MetaHuman / Mixamo, environment export to Blender
+  - Exclusive Premier-only content
+  - Genesis Starter Essentials at signup, with head and body shape bundles
+  - Free monthly character bundle coupon
+  - Daz Install Manager
+  limits:
+  - 35% off Daz Originals
+  - Member pricing on Daz+ products plus an additional 10% off
+  - $10 off Daz Originals monthly
+  - $10 off when spending $25+ on select content monthly
+  - Token system, 1 token per $5 spent, up to 30% cart discount or 45% on Daz Originals
+developer_surface_cost:
+  sdk: 'DAZ Studio 4.5+ SDK: $0.00 (store SKU 14876); requires a Daz account and Daz Studio 4.x Pro'
+  optional_addons:
+  - name: Interactive License
+    price: 10.00
+  - name: 3D Printing License
+    price: 1.99
+api_plans: 0
+api_plans_note: >-
+  Zero. Daz 3D publishes no API and therefore no API pricing, no usage-metered tier, and
+  no overage schedule. The AI training-data offering at daz3d.com/ai-training-data is a
+  contact-sales form with no published price.

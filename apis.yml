@@ -1,23 +1,113 @@
 aid: daz-3d
 name: DAZ 3D
-description: 'DAZ 3D is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Daz 3D is a Salt Lake City based 3D content and software company best
+  known for Daz Studio, a free figure posing, morphing and rendering application, and
+  for the Genesis line of morphable 3D human figures. The company runs a large first-party
+  and marketplace store of 3D characters, clothing, props and environments, publishes
+  the DSON (Daz Scene Object Notation) JSON-based scene file format, and licenses synthetic
+  3D character datasets for AI training through the surface that was formerly the Tafi
+  brand. Its developer surface is an application SDK rather than a web API: a free C++
+  plug-in SDK, the DAZ Script ECMAScript scripting API documented in the public Daz
+  Documentation Center, and open-source Daz-to-Blender / Unity / Unreal / Maya / Cinema
+  4D / 3ds Max bridge plug-ins published on GitHub. No public REST, GraphQL or event
+  API is published.'
+image: https://www.daz3d.com/static/images/logo/share.png
 url: https://raw.githubusercontent.com/api-evangelist/daz-3d/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-12'
 modified: '2026-08-12'
 tags:
-- Company
+- 3D
+- 3D Content
+- Digital Assets
+- Graphics
+- Rendering
+- Avatars
+- Game Development
+- AI Training Data
+- Marketplace
+- SDK
+- Desktop Software
+- Creator Tools
 apis: []
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-08-12'
+  status: minimal
+  artifacts_added: 10
+  pass: local-v1
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: >-
+    Daz 3D publishes a complete, public DAZ Script API reference and its own DSON JSON file
+    format spec as human-readable DokuWiki pages, but ships no OpenAPI, GraphQL SDL,
+    AsyncAPI, Postman collection or JSON Schema anywhere — and api.daz3d.com, the only
+    API-shaped hostname it owns, 302s every path to the marketing site root.
+  evidence:
+  - url: https://api.daz3d.com/openapi.json
+    status: 302
+  - url: https://www.daz3d.com/openapi.json
+    status: 404
+  - url: https://www.daz3d.com/rest/all/schema?services=all
+    status: 404
+  - url: https://docs.daz3d.com/public/dson_spec/start
+    status: 200
+  - url: https://www.daz3d.com/.well-known/agent-card.json
+    status: 404
+  checked: '2026-08-12'
 common:
+- type: DomainSecurity
+  url: security/daz-3d-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.daz3d.com/
+- type: Documentation
+  url: https://docs.daz3d.com/start
+- type: APIReference
+  url: https://docs.daz3d.com/public/software/dazstudio/4/referenceguide/scripting/api_reference/start
+- type: GettingStarted
+  url: https://docs.daz3d.com/public/software/dazstudio/4/referenceguide/scripting/start
+- type: SDK
+  url: https://www.daz3d.com/daz-studio-4-5-sdk
+- type: GitHubOrganization
+  url: https://github.com/daz3d
+- type: Blog
+  url: https://blog.daz3d.com/
+- type: BlogRSS
+  url: https://blog.daz3d.com/feed/
+- type: Support
+  url: https://www.daz3d.com/help
+- type: Community
+  url: https://www.daz3d.com/forums
+- type: Pricing
+  url: https://www.daz3d.com/daz-plus
+- type: SignUp
+  url: https://www.daz3d.com/customer/account/create/
+- type: Login
+  url: https://www.daz3d.com/customer/account/login/
+- type: TermsOfService
+  url: https://www.daz3d.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.daz3d.com/privacy-policy
+- type: ChangeLog
+  url: changelog/daz-3d-changelog.yml
+- type: Packages
+  url: packages/daz-3d-packages.yml
+- type: SDKs
+  url: packages/daz-3d-packages.yml
+- type: Lifecycle
+  url: lifecycle/daz-3d-lifecycle.yml
+- type: Conformance
+  url: conformance/daz-3d-conformance.yml
+- type: LLMsTxt
+  url: llms/daz-3d-llms.txt
+- type: Plans
+  url: plans/daz-3d-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/daz-3d-rate-limits.yml

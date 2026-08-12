@@ -1,0 +1,31 @@
+generated: '2026-08-12'
+method: searched
+source: >-
+  https://docs.daz3d.com/start,
+  https://docs.daz3d.com/public/software/dazstudio/4/referenceguide/scripting/api_reference/start,
+  https://www.daz3d.com/robots.txt
+limit_count: 0
+note: >-
+  Daz 3D documents no rate limits, because it publishes no web API to limit. The DAZ Script
+  scripting API and the C++ plug-in SDK run in-process inside a locally installed Daz
+  Studio, so there is no request budget, no quota, and no throttling surface. No
+  X-RateLimit-*, RateLimit-* or Retry-After headers were observed on any probed Daz host,
+  and no 429 was returned by any probe in this pass.
+limits: []
+response_headers: []
+exhaustion_status: null
+related_constraints:
+- constraint: concurrent Daz Connect sessions
+  documented: true
+  source: https://www.daz3d.com/daz-connect
+  detail: >-
+    Daz Connect products may be installed on an unlimited number of computers, but only a
+    limited number may be actively connected at the same time. Daz does not publish the
+    number. This is a licensing concurrency limit, not an API rate limit.
+- constraint: robots.txt crawl policy
+  documented: true
+  source: https://www.daz3d.com/robots.txt
+  detail: >-
+    No Crawl-delay is set. Disallow covers /newsletter/, /admin/, /forums/profile/,
+    /customer/ and /checkout/ only. A sitemap index is published at
+    https://www.daz3d.com/sitemaps/sitemap_index.xml.

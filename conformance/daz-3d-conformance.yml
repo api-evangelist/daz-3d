@@ -1,0 +1,72 @@
+generated: '2026-08-12'
+method: searched
+source: >-
+  https://docs.daz3d.com/public/dson_spec/start, https://www.daz3d.com/privacy-policy,
+  live probes of every Daz 3D host (see well-known/daz-3d-well-known.yml)
+note: >-
+  Recorded as an honest negative pass. Daz 3D publishes no web API, so none of the
+  cross-cutting HTTP/API standards apply or are claimed. No `Compliance` pointer is wired
+  into apis.yml: probe-security-programs.py found no trust center and no named
+  certification (SOC 2 / ISO 27001 / PCI / HIPAA / FedRAMP) anywhere on the Daz surface.
+  The one real specification Daz does publish is its own file format, DSON.
+standards:
+- id: dson
+  name: DSON (Daz Scene Object Notation)
+  conforms: true
+  first_party: true
+  version: 0.6.1.0
+  evidence: >-
+    Daz publishes the DSON file format specification in full at
+    https://docs.daz3d.com/public/dson_spec/start — a JSON-based scene/asset format with
+    documented data types, file types, asset addressing, coordinate systems, an
+    alphabetical object definition index and a metadata/content-type vocabulary. First
+    public release supporting it was Daz Studio 4.5.x.
+  gap: >-
+    No downloadable JSON Schema or other machine-readable definition is linked from the
+    specification. The format is JSON, but the spec describing it is human-readable web
+    pages only — a parser must be written from prose.
+- id: json
+  name: JSON
+  conforms: true
+  evidence: DSON is defined as a JSON-syntax format; the spec states it is "simple to parse due to its JSON syntax".
+- id: oauth2
+  conforms: false
+  evidence: No OAuth 2.0 surface. /.well-known/oauth-authorization-server returned 404 on every host probed.
+- id: oidc
+  conforms: false
+  evidence: No OIDC discovery. /.well-known/openid-configuration returned 404 on every host probed.
+- id: rfc9457
+  conforms: false
+  evidence: No HTTP API and no published error catalog, so no problem+json envelope exists.
+- id: rfc9116
+  name: security.txt
+  conforms: false
+  evidence: /.well-known/security.txt returned 404 on www.daz3d.com and docs.daz3d.com.
+- id: rfc8594
+  name: Sunset header
+  conforms: false
+  evidence: No HTTP API surface to carry Sunset/Deprecation headers.
+- id: rfc8615
+  name: well-known URIs
+  conforms: false
+  evidence: 22 well-known paths probed across three hosts, zero documents returned.
+- id: openapi
+  conforms: false
+  evidence: >-
+    Full contract discovery ran against www.daz3d.com, docs.daz3d.com and api.daz3d.com,
+    including Magento REST/Swagger paths (/rest/V1/*, /rest/all/schema?services=all,
+    /swagger, /soap?wsdl_list=1). All 404 or 302. No OpenAPI or Swagger exists.
+- id: graphql
+  conforms: false
+  evidence: /graphql returned 404 on www.daz3d.com and docs.daz3d.com, 302 on api.daz3d.com.
+- id: asyncapi
+  conforms: false
+  evidence: No event, streaming or webhook surface is documented anywhere on the Daz site.
+- id: a2a
+  name: A2A Agent Card
+  conforms: false
+  evidence: >-
+    /.well-known/agent-card.json and /.well-known/agent.json both 404 on www.daz3d.com and
+    docs.daz3d.com. No card exists — nothing was authored on the provider's behalf.
+certifications: []
+compliance_program_published: false
