@@ -11,6 +11,17 @@ description: 'Daz 3D is a Salt Lake City based 3D content and software company b
   Documentation Center, and open-source Daz-to-Blender / Unity / Unreal / Maya / Cinema
   4D / 3ds Max bridge plug-ins published on GitHub. No public REST, GraphQL or event
   API is published.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.daz3d.com/static/images/logo/share.png
 url: https://raw.githubusercontent.com/api-evangelist/daz-3d/refs/heads/main/apis.yml
 x-type: company
