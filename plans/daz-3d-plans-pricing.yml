@@ -77,3 +77,29 @@ api_plans_note: >-
   Zero. Daz 3D publishes no API and therefore no API pricing, no usage-metered tier, and
   no overage schedule. The AI training-data offering at daz3d.com/ai-training-data is a
   contact-sales form with no published price.
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - subscription
+  units: []
+  plans:
+  - name: Daz Base
+    access: other
+    model: free
+    model_how: derived
+    units: []
+    periods: []
+  - name: Daz Plus
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Daz Premier
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
