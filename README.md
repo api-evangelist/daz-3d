@@ -64,5 +64,101 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-DAZ 3D is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Daz 3D is a Salt Lake City based 3D content and software company best known for Daz Studio, a free figure posing, morphing and rendering application, and for the Genesis line of morphable 3D human figures. The company runs a large first-party and marketplace store of 3D characters, clothing, props and environments, publishes the DSON (Daz Scene Object Notation) JSON-based scene file format, and licenses synthetic 3D character datasets for AI training through the surface that was formerly the Tafi brand. Its developer surface is an application SDK rather than a web API: a free C++ plug-in SDK, the DAZ Script ECMAScript scripting API documented in the public Daz Documentation Center, and open-source Daz-to-Blender / Unity / Unreal / Maya / Cinema 4D / 3ds Max bridge plug-ins published on GitHub. No public REST, GraphQL or event API is published.
+
+**Areas:** 3D · 3D Content · Digital Assets · Graphics · Rendering · Avatars · Game Development · AI Training Data · Marketplace · SDK · Desktop Software · Creator Tools
+
+## DAZ 3D on APIs.io
+
+Everything profiled for DAZ 3D is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/daz-3d/](https://apis.io/providers/daz-3d/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Daz 3D Domain Security](https://apis.io/security/daz-3d/daz-3d-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Daz 3D Plans Pricing](https://apis.io/plans/daz-3d/daz-3d-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Daz 3D Rate Limits](https://apis.io/rate-limits/daz-3d/daz-3d-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.daz3d.com/)
+- [Documentation](https://docs.daz3d.com/start)
+- [Getting started](https://docs.daz3d.com/public/software/dazstudio/4/referenceguide/scripting/start)
+- [API reference](https://docs.daz3d.com/public/software/dazstudio/4/referenceguide/scripting/api_reference/start)
+- [Pricing](https://www.daz3d.com/daz-plus)
+- [Sign up](https://www.daz3d.com/customer/account/create/)
+- [Support](https://www.daz3d.com/help)
+- [Blog](https://blog.daz3d.com/)
+- [Terms of service](https://www.daz3d.com/terms-of-service)
+- [Privacy policy](https://www.daz3d.com/privacy-policy)
+- [GitHub](https://github.com/daz3d)
+
+## API Evangelist rating
+
+**Kin Score 33.8** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.3 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 42.9 |
+| Access clarity | 76.3 |
+
+**Agent readiness 4.7** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | platform (partial credit) |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 18.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/daz-3d/](https://apis.io/providers/daz-3d/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for DAZ 3D: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/daz-3d/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
